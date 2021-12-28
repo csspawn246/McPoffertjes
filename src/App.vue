@@ -1,7 +1,14 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+
+  <div id="Header">
+    <!-- <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link> -->
+    <h2>McPoffertjes - Ihr Dessert-Experte</h2>
+    <img src="/poffertjes.png" alt="mcpoffertjes-logo">
+
+    <div><router-link to="/basic">Online-Reservierung</router-link></div>
+    
+
   </div>
   <router-view/>
 </template>
