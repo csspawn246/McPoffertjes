@@ -1,9 +1,9 @@
 <template>
   <div class="summary">
-      <h1>Online-Reservierung</h1>
-    <div class="flexrow content">
-          
-
+    <div class="content">
+        <a href="http://localhost:8080">McPoffertjes - Ihr Dessert-Experte</a>
+          <!-- <router-link to="/"><h1>McPoffertjes - Ihr Dessert-Experte</h1></router-link> -->
+        <div class= "box"> 
         <div class="sidebar-left">
             <h3 class="heading">Zusammenfassung</h3>
             
@@ -27,16 +27,19 @@
                 <div class="table-nr-value">{{this.tableNr}}</div> 
             </div>
 
-
-            <div><router-link to="/dish-select">Zurück</router-link></div>
-
-
+            <div class="flexrow buttons">
+                <a href="http://localhost:8080/dish-select">Zurück</a>
+                <!-- <div><router-link to="/dish-select">Zurück</router-link></div> -->
+            </div>
         </div>
-        <div class="mainview">
+        <div class="sidebar-left">
             <h3>Gewählte Gerichte</h3>
             <p>1  x Süß-Kartoffelgratin 4,20€</p>
             <p>Gesamt: 4,20€</p>
-            <button>Bestätigen</button>
+            <div class="flexrow buttons">
+                <a href="http://localhost:8080/success">Bestätigen</a>
+            </div>
+        </div>
         </div>
     </div>
   </div>
@@ -62,8 +65,16 @@ export default {
 </script>
 
 <style scoped lang="less">
-//@import (reference) "~@/less/index.less";
+//@import "../less/default.less";
+html, body {
+  margin:0px;
+  height:100vh;
+}
 
+.box{
+    display: flex;
+    align-items: center´´;
+}
 .flexrow{
     display: flex;
     flex-direction: row;
@@ -77,6 +88,15 @@ export default {
 }
 
 .content{
+
+  a{
+    text-decoration: none;
+    font-size: 50px;
+    color: rebeccapurple;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
 
   background-color: lavender;
   display: flex;
@@ -108,16 +128,17 @@ export default {
         width: 100%;
         justify-content: center;
 
-        div{
-            background-color: white;
-            border: 2px solid black;
+        a{
+            font-size: 20px;
+            text-decoration: none;
+            color: rebeccapurple;
+            background-color: lavender;
+            border: 2px solid rebeccapurple;
             border-radius: 0.5rem;
             padding: 2px 6px;
-        }
+          }
     }
-
 }
-    
-    
+
 
 </style>
