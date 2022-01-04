@@ -1,8 +1,8 @@
 <template>
   <div class="table-select">
     <div class="content">
-          <h1>Online-Reservierung</h1>
-
+        <a href="http://localhost:8080">McPoffertjes - Ihr Dessert-Experte</a>
+          <!-- <router-link to="/"><h1>McPoffertjes - Ihr Dessert-Experte</h1></router-link> -->
         <div class="flexcol sidebar-left">
             <h3 class="heading">Tischauswahl</h3>
 
@@ -31,14 +31,13 @@
             <p>Um Tische zusammenzuführen, klicken und ziehen.</p>
 
             <div class="flexrow buttons">
-                <div><router-link to="/basic">Zurück</router-link></div>
-                <div><router-link to="/dish-select">Weiter</router-link></div>
+                <a href="http://localhost:8080/basic">Zurück</a>
+                <a href="http://localhost:8080/dish-select">Weiter</a>
+                <!-- <div><router-link to="/basic">Zurück</router-link></div>
+                <div><router-link to="/dish-select">Weiter</router-link></div> -->
             </div>
             
 
-
-        </div>
-        <div class="mainview">
 
         </div>
     </div>
@@ -67,6 +66,11 @@ export default {
 <style scoped lang="less">
 //@import (reference) "~@/less/index.less";
 
+html, body {
+  margin:0px;
+  height:100vh;
+}
+
 .flexrow{
     display: flex;
     flex-direction: row;
@@ -82,17 +86,46 @@ export default {
 .content{
 
   background-color: lavender;
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+
+  a{
+    text-decoration: none;
+    font-size: 50px;
+    color: rebeccapurple;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
 
   .sidebar-left{
         width: 33%;
-        height: 100%;
+        height: 100vh;
         background-color: white;
 
         .heading{
             width: 100%;
             text-align: center;
+        }
+
+        table{
+          table-layout: fixed;
+          td{
+            width: 50%;
+            text-align: left;
+          }
+        }
+
+        .inputs{
+          width: 100%;
+          height: 20vh;
+
+          input{
+            margin: 1rem;
+            padding: 0.25rem;
+            height: 1.5rem;
+            border: 1px solid rebeccapurple;
+            border-radius: 0.5rem;
+          }
         }
 
         .line-item{
@@ -105,21 +138,30 @@ export default {
                 border-radius: 5px;
             }
         }
-    }
 
-    .buttons{
-        width: 100%;
-        justify-content: center;
+        .buttons{
+          width: 100%;
+          justify-content: center;
 
-        div{
-            background-color: white;
-            border: 2px solid black;
+          a{
+            font-size: 20px;
+            text-decoration: none;
+            color: rebeccapurple;
+            background-color: lavender;
+            border: 2px solid rebeccapurple;
             border-radius: 0.5rem;
             padding: 2px 6px;
+          }
         }
-    }
+  }
 
-}
+  .mainview{
+    height: 100vh;
+    background-color: red;
+
+  }
+
     
+}
 
 </style>

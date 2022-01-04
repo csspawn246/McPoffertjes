@@ -1,17 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
-//import Home from '../views/Home.vue'
+import Start from '../views/start.vue'
 import Basic from '../views/basic.vue'
 import TableSelect from '../views/table-select.vue'
 import DishSelect from '../views/dish-select.vue'
-import Summary from '../views/summary.vue'
+import Summary from '../views/summary.vue' 
+import Success from '../views/success.vue'
 
 
 const routes = [
-  // {
-  //   path: '/',
-  //   name: 'Home',
-  //   component: Home
-  // },
+  {
+     path: '/',
+     name: 'Start',
+     component: Start
+   },
   {
     path: '/basic',
     name: 'basic',
@@ -32,6 +33,11 @@ const routes = [
     path: '/summary',
     name: 'summary',
     component: Summary,
+  },
+  {
+    path: '/success',
+    name: 'success',
+    component: Success,
   }
   // {
   //   path: '/about',
