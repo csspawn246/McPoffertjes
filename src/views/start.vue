@@ -5,7 +5,7 @@
             <img src="../assets/poffertjes.png" alt="mcpoffertjes-logo" style="width:500px;">
             <p></p>
             <div class="flexrow buttons">
-                <a href="http://localhost:8080/basic">Online-Reservierung</a>
+                <a href="/basic">Online-Reservierung</a>
                 <!-- <div><router-link to="/basic">Online-Reservierung</router-link></div> -->
             </div>
             <p></p>

@@ -1,7 +1,7 @@
 <template>
   <div class="table-select">
     <div class="content">
-        <a href="http://localhost:8080">McPoffertjes - Ihr Dessert-Experte</a>
+        <a href="/">McPoffertjes - Ihr Dessert-Experte</a>
           <!-- <router-link to="/"><h1>McPoffertjes - Ihr Dessert-Experte</h1></router-link> -->
         <div class="flexcol sidebar-left">
             <h3 class="heading">Tischauswahl</h3>
@@ -31,8 +31,8 @@
             <p>Um Tische zusammenzuführen, klicken und ziehen.</p>
 
             <div class="flexrow buttons">
-                <a href="http://localhost:8080/basic">Zurück</a>
-                <a href="http://localhost:8080/dish-select">Weiter</a>
+                <a href="/basic">Zurück</a>
+                <a href="/dish-select">Weiter</a>
                 <!-- <div><router-link to="/basic">Zurück</router-link></div>
                 <div><router-link to="/dish-select">Weiter</router-link></div> -->
             </div>

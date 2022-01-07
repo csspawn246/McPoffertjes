@@ -1,7 +1,7 @@
 <template>
   <div class="summary">
     <div class="content">
-        <a href="http://localhost:8080">McPoffertjes - Ihr Dessert-Experte</a>
+        <a href="/">McPoffertjes - Ihr Dessert-Experte</a>
           <!-- <router-link to="/"><h1>McPoffertjes - Ihr Dessert-Experte</h1></router-link> -->
         <div class= "box"> 
         <div class="sidebar-left">
@@ -28,7 +28,7 @@
             </div>
 
             <div class="flexrow buttons">
-                <a href="http://localhost:8080/dish-select">Zurück</a>
+                <a href="/dish-select">Zurück</a>
                 <!-- <div><router-link to="/dish-select">Zurück</router-link></div> -->
             </div>
         </div>
@@ -37,7 +37,7 @@
             <p>1  x Süß-Kartoffelgratin 4,20€</p>
             <p>Gesamt: 4,20€</p>
             <div class="flexrow buttons">
-                <a href="http://localhost:8080/success">Bestätigen</a>
+                <a href="/success">Bestätigen</a>
             </div>
         </div>
         </div>

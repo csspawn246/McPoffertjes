@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div class="content">
-            <a href="http://localhost:8080">McPoffertjes - Ihr Dessert-Experte</a>
+            <a href="/">McPoffertjes - Ihr Dessert-Experte</a>
             <p></p>
             <h>Herzlichen Dank für Ihre Reservierung! <br> Ihre Bestellung war erfolgreich!</h>
             <p>Zeigen Sie bitte folgenden Code im Restaurant vor:</p>
