@@ -1,29 +1,29 @@
 <template>
   <div class="table-select">
     <div class="content">
-        <a href="/">McPoffertjes - Ihr Dessert-Experte</a>
+        <router-link to="/">McPoffertjes - Ihr Dessert-Experte</router-link>
           <!-- <router-link to="/"><h1>McPoffertjes - Ihr Dessert-Experte</h1></router-link> -->
         <div class="flexcol sidebar-left">
             <h3 class="heading">Tischauswahl</h3>
 
             <div class="line-item flexrow date">
                 <p>Datum:</p>
-                <div>{{this.date}}</div>
+                <div>{{store.date}}</div>
             </div>
             
             <div class="line-item flexrow time">
                 <p>Uhrzeit:</p>
-                <div>{{this.time}}</div>
+                <div>{{store.time}}</div>
             </div>
             
             <div class="line-item flexrow person-count">
                 <p>Personenzahl:</p>
-                <div>{{this.personCount}}</div>
+                <div>{{store.personCount}}</div>
             </div>
              
             <div class="line-item flexrow table-nr">
                 <p>Tisch Nr.:</p>
-                <div class="table-nr-value">{{this.tableNr}}</div> 
+                <div class="table-nr-value">{{store.tableNr}}</div>
             </div>
             
 
@@ -31,35 +31,27 @@
             <p>Um Tische zusammenzuführen, klicken und ziehen.</p>
 
             <div class="flexrow buttons">
-                <a href="/basic">Zurück</a>
-                <a href="/dish-select">Weiter</a>
+                <router-link to="/basic" @click="validate" >Zurück</router-link>
+                <router-link to="/dish-select">Weiter</router-link>
                 <!-- <div><router-link to="/basic">Zurück</router-link></div>
                 <div><router-link to="/dish-select">Weiter</router-link></div> -->
-            </div>
-            
-
-
+            </div> 
         </div>
     </div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-//import HelloWorld from '@/components/HelloWorld.vue'
+import mixin from '@/mixin.js'
 
 export default {
   name: 'TableSelect',
-  data() {
-    return{
-      date : 'dd.mm.yyyy',
-      time: '23:59',
-      personCount : 99,
-      tableNr: undefined,
+  mixins: [mixin],
+  methods: {
+    validate: function() {
+      console.log(this.store.test++);
     }
-    
-
-    },
+  }
 }
 </script>
 

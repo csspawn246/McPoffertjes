@@ -12,30 +12,27 @@
               <table>
                 <tr class="line-item flexrow date">
                   <td ><label for="date">Datum:</label></td>
-                  <td><input type="date" id="date" v-model="date" required="required"></td>                
+                  <td><input type="date" id="date" v-model="store.date" required="required"></td>                
                 </tr>
 
                 <tr class="line-item flexrow time">
                   <td><label for="time">Uhrzeit:</label></td>
-                  <td><input type="time" id="time" v-model="time" required="required"></td>                
+                  <td><input type="time" id="time" v-model="store.time" required="required"></td>                
                 </tr>
               
               <tr class="line-item flexrow person-count">
                   <td><label for="person-count">Personenzahl:</label></td>
-                  <td><input type="number" id="person-count" v-model="personCount" required="required"></td>                
+                  <td><input type="number" id="person-count" v-model="store.personCount" required="required"></td>                
                 </tr>
 
               </table>
 
             </div>
             <br><br>
+            <p v-if="error">Die Eingabe ist nicht gültig</p>
             <div class="flexrow buttons">
-                <a href="/table-select">Weiter</a>
-                <!-- <div><router-link to="/table-select">Weiter</router-link></div> -->
-            </div>
-            
-
-
+                <router-link to="/table-select" event="">Weiter</router-link>
+            </div>          
         </div>
     </div>
   </div>
@@ -43,19 +40,24 @@
 
 <script>
 // @ is an alias to /src
-//import HelloWorld from '@/components/HelloWorld.vue'
+import mixin from '@/mixin.js'
 
 export default {
   name: 'Basic',
   data() {
-    return{
-      date : undefined,
-      time: undefined,
-      personCount : undefined,
+    return {
+      date: undefined,
+      error: false
     }
-    
-
-    },
+  },
+  mixins: [mixin],
+  methods: {
+  },
+  beforeRouteLeave: function(to, from, next) {
+    if (!this.store.date || !this.store.time || this.store.personCount < 1) {
+      this.error = true;
+    } else next();
+  }
 }
 </script>
 
