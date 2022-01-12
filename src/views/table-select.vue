@@ -3,6 +3,7 @@
     <div class="content">
         <router-link to="/">McPoffertjes - Ihr Dessert-Experte</router-link>
           <!-- <router-link to="/"><h1>McPoffertjes - Ihr Dessert-Experte</h1></router-link> -->
+        <div class="wrapper">
         <div class="flexcol sidebar-left">
             <h3 class="heading">Tischauswahl</h3>
 
@@ -28,7 +29,7 @@
             
 
             <p>Zum Auswählen eines Tisches klicken.</p>
-            <p>Um Tische zusammenzuführen, klicken und ziehen.</p>
+            <p v-if="error">Bitte wähle einen Tisch aus</p>
 
             <div class="flexrow buttons">
                 <router-link to="/basic" @click="validate" >Zurück</router-link>
@@ -37,21 +38,37 @@
                 <div><router-link to="/dish-select">Weiter</router-link></div> -->
             </div> 
         </div>
+        <div style="width: 100%; display: flex; flex-direction: column">
+          <div v-for="row in store.tables" :key="row[0].id" class="tableRow">
+            <desk v-for="table in row" :seatCount="table.seatCount" :selected="store.tableNr == table.id" :toSmall="store.personCount > table.seatCount" :key="table.id" @click="store.tableNr = table.id" />
+          </div>
+        </div>
+        </div>
     </div>
   </div>
 </template>
 
 <script>
 import mixin from '@/mixin.js'
+import desk from '@/components/table.vue'
 
 export default {
   name: 'TableSelect',
   mixins: [mixin],
-  methods: {
-    validate: function() {
-      console.log(this.store.test++);
+  data () {
+    return {
+      error: false
     }
+  },
+  components: {desk},
+  methods: {
+  },
+  beforeRouteLeave: function(to, from, next) {
+    if (!this.store.tableNr) {
+      this.error = true;
+    } else next();
   }
+
 }
 </script>
 
@@ -73,6 +90,17 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.tableRow {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  margin: 1rem;
 }
 
 .content{

@@ -50,6 +50,19 @@ var Store = reactive({
             price: 9.3,
             count: 0
         },
+    ],
+
+    tables: [
+        [
+            {id: 1, seatCount: 8},
+            {id: 2, seatCount: 8},
+            {id: 3, seatCount: 8}
+        ],
+        [
+            {id: 4, seatCount: 8},
+            {id: 5, seatCount: 8},
+            {id: 6, seatCount: 8}
+        ]
     ]
 })
 
