@@ -3,9 +3,15 @@
         <div class="content">
             <a href="/">McPoffertjes - Ihr Dessert-Experte</a>
             <p></p>
-            <h>Herzlichen Dank für Ihre Reservierung! <br> Ihre Bestellung war erfolgreich!</h>
-            <p>Zeigen Sie bitte folgenden Code im Restaurant vor:</p>
+            <h>Herzlichen Dank für Deine Reservierung! <br> Deine Bestellung war erfolgreich!</h>
+            <p>Zeige bitte folgenden Code im Restaurant vor:</p>
             <p>HZ7/ssdl)2020</p>
+            <p>In Kürze erhältst du von uns eine Zusammenfassung deiner Reservierung an die von dir angegebene E-Mail.</p>
+            <p>Eine Änderung oder Stornierung deiner Reservierung ist von jetzt an leider nur noch telefonisch möglich.</p>
+            <p>Bitte melde dich bei Fragen unter:</p>
+            <p>0511 480-432-55</p>
+            <p>Wir freuen uns auf Dich!</p>
+            <p>Dein McPoffertjes-Team</p>
         </div>
     </div>
 </template>

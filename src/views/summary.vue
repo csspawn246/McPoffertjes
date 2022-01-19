@@ -27,6 +27,15 @@
                 <div class="table-nr-value">{{store.tableNr}}</div> 
             </div>
 
+            <div class="line-item flexrow email">
+              <label for="email">E-Mail:</label>
+              <input type="email" id="email" v-model="store.email" required="required"> 
+            </div>
+
+            <div class="line-item">
+              Deine E-Mail-Adresse benötigen wir ausschließlich für die Reservierungsbestätigung.
+            </div>
+
             <div class="flexrow buttons">
                 <router-link to="/dish-select">Zurück</router-link>
                 <!-- <div><router-link to="/dish-select">Zurück</router-link></div> -->
@@ -77,6 +86,18 @@ export default {
 html, body {
   margin:0px;
   height:100vh;
+}
+
+input{
+            margin: 1rem;
+            padding: 0.25rem;
+            height: 1.5rem;
+            border: 1px solid rebeccapurple;
+            border-radius: 0.5rem;
+          }
+
+#email{
+  width: 15rem;
 }
 
 .box{
@@ -135,6 +156,7 @@ html, body {
 
         .line-item{
             margin-left: 2rem;
+            text-align: left;
 
             div {
                 margin-left: 1rem;

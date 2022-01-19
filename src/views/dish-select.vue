@@ -53,7 +53,7 @@
             <div class="flexrow food" v-for="dish in store.dishes">
               <p class="name">{{dish.name}}</p>
               <p class="price">{{dish.price}}€</p>
-              <input class="count" type="number" id="person-count" v-model="dish.count" required="required">
+              <input class="count" type="number" id="person-count" v-model="dish.count" max="15" min="0" required="required">
             </div>
             <div class="flexrow food">
               <strong class="name">Gesamt</strong>

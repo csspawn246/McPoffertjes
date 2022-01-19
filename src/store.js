@@ -1,9 +1,9 @@
 import {reactive} from 'vue'
 
 var Store = reactive({
-    date : undefined,
-    time: undefined,
-    personCount : undefined,
+    date : '2022-02-01',
+    time: '18:00',
+    personCount : 1,
 
     tableNr: undefined,
     
