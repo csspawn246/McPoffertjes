@@ -5,7 +5,7 @@ var Store = reactive({
     time: '18:00',
     personCount : 1,
 
-    tableNr: undefined,
+    tableNr: [],
     
     test: 1,
 

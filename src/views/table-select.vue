@@ -29,7 +29,7 @@
             
 
             <p>Zum Auswählen eines Tisches klicken.</p>
-            <p v-if="error">Bitte wähle einen Tisch aus</p>
+            <p v-if="error">Bitte wählen Sie genug Tische für die Anzahl der reservierenden Personen aus.</p>
 
             <div class="flexrow buttons">
                 <router-link to="/basic" @click="validate" >Zurück</router-link>
@@ -40,7 +40,7 @@
         </div>
         <div style="width: 100%; display: flex; flex-direction: column">
           <div v-for="row in store.tables" :key="row[0].id" class="tableRow">
-            <desk v-for="table in row" :seatCount="table.seatCount" :selected="store.tableNr == table.id" :toSmall="store.personCount > table.seatCount" :key="table.id" @click="store.tableNr = table.id" />
+            <desk v-for="table in row" :seatCount="table.seatCount" :selected="store.tableNr.includes(table.id)" :key="table.id" @click="selectTable(table.id)" />
           </div>
         </div>
         </div>
@@ -60,11 +60,23 @@ export default {
       error: false
     }
   },
+  computed: {
+    selectedSeatCount: function() {
+      return this.store.tableNr.length * 8;
+    }
+  },
   components: {desk},
   methods: {
+    selectTable: function(nr) {
+      if (this.store.tableNr.includes(nr)) {
+        this.store.tableNr.splice(this.store.tableNr.indexOf(nr), 1);
+      } else {
+        this.store.tableNr.push(nr);
+      }
+    }
   },
   beforeRouteLeave: function(to, from, next) {
-    if (!this.store.tableNr) {
+    if (this.selectedSeatCount < this.store.personCount) {
       this.error = true;
     } else next();
   }
