@@ -59,7 +59,7 @@
               <strong class="count">{{sumCount}}</strong>
             </div>
             <div class="flexrow buttons">
-                <a href="/success">Bestätigen</a>
+                <a href="/success" :class="!store.email && 'disabled'">Bestätigen</a>
             </div>
             </div>
         </div>
@@ -179,6 +179,13 @@ input{
             border: 2px solid rebeccapurple;
             border-radius: 0.5rem;
             padding: 2px 6px;
+          }
+        a.disabled{
+            pointer-events: none;
+            cursor: default;
+            color: grey;
+            background-color: lightgray;
+            border: grey;
           }
     }
 }
