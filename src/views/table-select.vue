@@ -39,10 +39,10 @@
                 <div>{{store.personCount}}</div>
             </div>
              
-            <div class="line-item flexrow table-nr">
-                <p>Tisch Nr.:</p>
+            <div v-if="store.tableNr.length !== 0" class="line-item flexrow table-nr">
+                <p>Tischauswahl:</p>
                 <div class="table-nr-value">{{store.tableNr}}</div>
-                <p>Plätze:</p>
+                <p id="plaetze">Plätze:</p>
                 <div class="seat-count-value">{{selectedSeatCount}}</div>
             </div>
             
@@ -53,7 +53,7 @@
             </div>
             
             
-            <p v-if="error">Bitte wählen Sie die Tische so aus, dass die Anzahl an Sitzplätzen die Anzahl der reservierenden Personen um maximal 2 übersteigt.</p>
+            <p v-if="error" class="error">Bitte wählen Sie die Tische so aus, dass die Anzahl an Sitzplätzen die Anzahl der reservierenden Personen um maximal 2 übersteigt.</p>
 
             <div class="flexrow buttons">
                 <router-link to="/basic">Zurück</router-link>
@@ -184,6 +184,10 @@ export default {
   }
 }
 
+#plaetze{
+  margin-left: 1rem;
+}
+
 area{
   display: block;
   cursor: pointer;
@@ -196,6 +200,7 @@ area{
 }
 
 .restaurant-layout{
+  margin: 3rem;
   max-width: 66%;
   max-height: 100vh;
   overflow-x: scroll;
