@@ -6,6 +6,7 @@ var Store = reactive({
     personCount : 1,
 
     tableNr: [],
+
     
     test: 1,
 
@@ -53,16 +54,43 @@ var Store = reactive({
     ],
 
     tables: [
-        [
-            {id: 1, seatCount: 8},
-            {id: 2, seatCount: 8},
-            {id: 3, seatCount: 8}
-        ],
-        [
-            {id: 4, seatCount: 8},
-            {id: 5, seatCount: 8},
-            {id: 6, seatCount: 8}
-        ]
+        {id: 1, seatCount: 2},
+        {id: 2, seatCount: 2},
+        {id: 3, seatCount: 2},
+        {id: 4, seatCount: 2},
+        {id: 5, seatCount: 2},
+        {id: 6, seatCount: 2},
+        {id: 7, seatCount: 2},
+        {id: 8, seatCount: 4},
+        {id: 9, seatCount: 4},
+        {id: 10, seatCount: 4},
+        {id: 11, seatCount: 4},
+        {id: 12, seatCount: 2},
+        {id: 13, seatCount: 2},
+        {id: 14, seatCount: 4},
+        {id: 15, seatCount: 4},
+        {id: 16, seatCount: 4},
+        {id: 17, seatCount: 4},
+        {id: 18, seatCount: 2},
+        {id: 19, seatCount: 2},
+        {id: 20, seatCount: 4},
+        {id: 21, seatCount: 4},
+        {id: 22, seatCount: 4},
+        {id: 23, seatCount: 4},
+        {id: 24, seatCount: 2},
+        {id: 25, seatCount: 2},
+        {id: 26, seatCount: 2},
+        {id: 27, seatCount: 2},
+        {id: 28, seatCount: 2},
+        {id: 29, seatCount: 2},
+        {id: 30, seatCount: 4},
+        {id: 31, seatCount: 4},
+        {id: 32, seatCount: 4},
+        {id: 33, seatCount: 4},
+        {id: 34, seatCount: 2},
+        {id: 35, seatCount: 2},
+        {id: 36, seatCount: 4},
+        {id: 37, seatCount: 4},
     ]
 })
 

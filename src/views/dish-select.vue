@@ -1,7 +1,7 @@
 <template>
   <div class="dish-select">
     <div class="content">
-            <router-link to="/">McPoffertjes - Ihr Dessert-Experte</router-link>
+            <router-link class="page-heading" to="/">McPoffertjes - Ihr Dessert-Experte</router-link>
           <!-- <router-link to="/"><h1>McPoffertjes - Ihr Dessert-Experte</h1></router-link> -->
         <div class="wrapper">
         <div class="sidebar-left">
@@ -78,12 +78,8 @@ export default {
 </script>
 
 <style scoped lang="less">
-//@import (reference) "~@/less/index.less";
+@import "~@/less/default.less";
 
-html, body {
-  margin:0px;
-  height:100vh;
-}
 
 .flexrow{
   display: flex;
@@ -103,96 +99,13 @@ html, body {
   }
 }
 
-.flexcol{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.wrapper {
+  display: flex;  
 }
 
-.content{
-
-  background-color: lavender;
-  height: 100%;
-
-  .wrapper {
-    display: flex;
-    
-  }
-
-  a{
-    text-decoration: none;
-    font-size: 50px;
-    color: rebeccapurple;
-  }
-  a:hover{
-    text-decoration: underline;
-  }
-
-  .sidebar-left{
-        width: 33%;
-        height: 100vh;
-        background-color: white;
-
-        .heading{
-            width: 100%;
-            text-align: center;
-        }
-
-        table{
-          table-layout: fixed;
-          td{
-            width: 50%;
-            text-align: left;
-          }
-        }
-
-        .inputs{
-          width: 100%;
-          height: 20vh;
-
-          input{
-            margin: 1rem;
-            padding: 0.25rem;
-            height: 1.5rem;
-            border: 1px solid rebeccapurple;
-            border-radius: 0.5rem;
-          }
-        }
-
-        .line-item{
-            margin-left: 2rem;
-
-            div {
-                margin-left: 1rem;
-                padding: 2px 6px;
-                background-color: lightgrey;
-                border-radius: 5px;
-            }
-        }
-
-        .buttons{
-          width: 100%;
-          justify-content: center;
-
-          a{
-            font-size: 20px;
-            text-decoration: none;
-            color: rebeccapurple;
-            background-color: lavender;
-            border: 2px solid rebeccapurple;
-            border-radius: 0.5rem;
-            padding: 2px 6px;
-          }
-        }
-  }
-
-  .mainview{
-    height: 100vh;
-    background-color: grey;
-
-  }
+ 
 
     
-}
+
 
 </style>

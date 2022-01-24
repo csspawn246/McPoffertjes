@@ -1,7 +1,7 @@
 <template>
   <div class="summary">
     <div class="content">
-        <router-link to="/">McPoffertjes - Ihr Dessert-Experte</router-link>
+        <router-link class="page-heading" to="/">McPoffertjes - Ihr Dessert-Experte</router-link>
           <!-- <router-link to="/"><h1>McPoffertjes - Ihr Dessert-Experte</h1></router-link> -->
         <div class= "box">
         <div class="sidebar-left">
@@ -29,7 +29,7 @@
 
             <div class="line-item flexrow email">
               <label for="email">E-Mail:</label>
-              <input type="email" id="email" v-model="store.email" required="required"> 
+              <input type="email" id="email" v-model="store.email" required="required" :class="(store.email == undefined) && 'required'"> 
             </div>
 
             <div class="line-item">
@@ -82,28 +82,20 @@ export default {
 </script>
 
 <style scoped lang="less">
-//@import "../less/default.less";
-html, body {
-  margin:0px;
-  height:100vh;
-}
-
-input{
-            margin: 1rem;
-            padding: 0.25rem;
-            height: 1.5rem;
-            border: 1px solid rebeccapurple;
-            border-radius: 0.5rem;
-          }
+@import "~@/less/default.less";
 
 #email{
   width: 15rem;
+  margin: 1rem;
+  padding: 0.25rem;
+  height: 1.5rem;
 }
 
 .box{
     display: flex;
     align-items: center´´;
 }
+
 .flexrow{
     display: flex;
     flex-direction: row;
@@ -119,74 +111,6 @@ input{
       .count {
         width: 30%;
       }
-    }
-}
-
-
-.flexcol{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.content{
-
-  a{
-    text-decoration: none;
-    font-size: 50px;
-    color: rebeccapurple;
-  }
-  a:hover{
-    text-decoration: underline;
-  }
-
-  background-color: lavender;
-  display: flex;
-  flex-direction: column;
-
-  .sidebar-left{
-        width: 33%;
-        height: 100%;
-        background-color: white;
-
-        .heading{
-            width: 100%;
-            text-align: center;
-        }
-
-        .line-item{
-            margin-left: 2rem;
-            text-align: left;
-
-            div {
-                margin-left: 1rem;
-                padding: 2px 6px;
-                background-color: lightgrey;
-                border-radius: 5px;
-            }
-        }
-    }
-
-    .buttons{
-        width: 100%;
-        justify-content: center;
-
-        a{
-            font-size: 20px;
-            text-decoration: none;
-            color: rebeccapurple;
-            background-color: lavender;
-            border: 2px solid rebeccapurple;
-            border-radius: 0.5rem;
-            padding: 2px 6px;
-          }
-        a.disabled{
-            pointer-events: none;
-            cursor: default;
-            color: grey;
-            background-color: lightgray;
-            border: grey;
-          }
     }
 }
 

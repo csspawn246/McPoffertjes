@@ -1,7 +1,7 @@
 <template>
   <div class="basic">
     <div class="content">
-        <a href="/">McPoffertjes - Ihr Dessert-Experte</a>
+        <a class="page-heading" href="/">McPoffertjes - Ihr Dessert-Experte</a>
           <!-- <router-link to="/"><h1>McPoffertjes - Ihr Dessert-Experte</h1></router-link> -->
 
         <div class="flexcol sidebar-left">
@@ -12,7 +12,7 @@
               <table>
                 <tr class="line-item flexrow date">
                   <td ><label for="date">Datum:</label></td>
-                  <td><input type="date" id="date" v-model="store.date" required="required"></td>                                
+                  <td><input type="date" id="date" v-model="store.date" required="required" :class="(store.date == undefined) && 'required'"></td>                                
                 </tr>
 
                 <tr>
@@ -22,7 +22,7 @@
 
                 <tr class="line-item flexrow time">
                   <td><label for="time">Uhrzeit:</label></td>
-                  <td><input type="time" id="time" v-model="store.time" required="required"></td>                
+                  <td><input type="time" id="time" v-model="store.time" required="required" :class="(store.time == undefined) && 'required'"></td>                
                 </tr>
 
                 <tr>
@@ -32,7 +32,7 @@
               
               <tr class="line-item flexrow person-count">
                   <td><label for="person-count">Personenzahl:</label></td>
-                  <td><input type="number" id="person-count" v-model="store.personCount" min="1" required="required"></td>                
+                  <td><input type="number" id="person-count" v-model="store.personCount" min="1" required="required" :class="(store.personCount == undefined) && 'required'"></td>                
                 </tr>
 
                 <tr>
@@ -99,7 +99,7 @@ export default {
         return str
       }
       if(this.store.personCount > 10){
-        str = 'Online-Reservierungen leider nur für max. 10 Personen möglich.'
+        str = 'Online-Reservierungen leider nur für max. 10 Personen möglich.\n Bitte kontaktiere uns telefonisch!'
       }
       return str
     },
@@ -121,116 +121,14 @@ export default {
 }
 </script>
 
+<style lang="less">
+
+</style>
+
+
 <style scoped lang="less">
-  
-html, body {
-  margin:0px;
-  height:100vh;
-}
-
-.flexrow{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.flexcol{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
+@import "~@/less/default.less";
 
 
 
-.content{
-
-  background-color: lavender;
-  height: 100%;
-
-  a{
-    text-decoration: none;
-    font-size: 50px;
-    color: rebeccapurple;
-  }
-  a:hover{
-    text-decoration: underline;
-  }
-
-  .sidebar-left{
-        width: 33%;
-        height: 100vh;
-        background-color: white;
-
-        .heading{
-            width: 100%;
-            text-align: center;
-        }
-
-        table{
-          table-layout: fixed;
-          td{
-            width: 50%;
-            text-align: left;
-          }
-        }
-
-        .inputs{
-          width: 100%;
-          height: 50vh;
-
-          input{
-            margin: 1rem;
-            padding: 0.25rem;
-            height: 1.5rem;
-            border: 1px solid rebeccapurple;
-            border-radius: 0.5rem;
-          }
-        }
-
-        .error{
-          color: red;
-          font-size: 11pt;
-        }
-
-        .line-item{
-            margin-left: 2rem;
-
-            div {
-                margin-left: 1rem;
-                padding: 2px 6px;
-                background-color: lightgrey;
-                border-radius: 5px;
-            }
-        }
-
-        .buttons{
-          width: 100%;
-          justify-content: center;
-
-          a{
-            font-size: 20px;
-            text-decoration: none;
-            color: rebeccapurple;
-            background-color: lavender;
-            border: 2px solid rebeccapurple;
-            border-radius: 0.5rem;
-            padding: 2px 6px;
-          }
-
-          a.disabled{
-            pointer-events: none;
-            cursor: default;
-            color: grey;
-            background-color: lightgray;
-            border: grey;
-          }
-        }
-  }
-
-  .mainview{
-    height: 100vh;
-    background-color: grey;
-
-  }
-}
 </style>
