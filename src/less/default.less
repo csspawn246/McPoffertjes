@@ -15,8 +15,23 @@ html, body {
     align-items: flex-start;
 }
 
+.progress-bar{
+  width: 100%;
+  div{
+    flex-grow: 1;
+    width: 100;
+    margin: 0 3rem;
+    padding: 0 2rem;
+    border: 2px solid rgb(255, 145, 0);
+    background-color: rgb(255, 244, 231);
+    p{
+      color: rgb(255, 145, 0);
+    };
+  }
+}
+
 .content{ //entire page content
-  background-color: lavender;
+  background-color: rgb(253, 230, 200);
   height: 100%;
 }
 
@@ -24,6 +39,8 @@ html, body {
   width: 33%;
   height: 100vh;
   background-color: white;
+  border-radius: 1rem;
+  margin: 2rem;
 
   .heading{
     width: 100%;
@@ -47,7 +64,7 @@ html, body {
     margin: 1rem;
     padding: 0.25rem;
     height: 1.5rem;
-    border: 1px solid rebeccapurple;
+    border: 1px solid rgb(255, 145, 0);
     border-radius: 0.5rem;
   }
 
@@ -77,11 +94,12 @@ html, body {
     a{
       font-size: 20px;
       text-decoration: none;
-      color: rebeccapurple;
-      background-color: lavender;
-      border: 2px solid rebeccapurple;
+      color: rgb(255, 145, 0);
+      background-color: rgb(253, 230, 200);
+      border: 2px solid rgb(255, 145, 0);
       border-radius: 0.5rem;
       padding: 2px 6px;
+      margin: 0 0.5rem;
     }
     a.disabled{
       pointer-events: none;
@@ -91,8 +109,8 @@ html, body {
       border: grey;
     }
     div{
-      background-color: lavender;
-      border: 2px solid rebeccapurple;
+      background-color: rgb(253, 230, 200);
+      border: 2px solid rgb(255, 145, 0);
       border-radius: 0.5rem;
       padding: 2px 6px;
     }
@@ -105,7 +123,7 @@ html, body {
  a{
     text-decoration: none;
     font-size: 50px;
-    color: rebeccapurple;
+    color: rgb(255, 145, 0);
   }
   a:hover{
     text-decoration: none;

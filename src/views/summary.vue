@@ -3,6 +3,23 @@
     <div class="content">
         <router-link class="page-heading" to="/">McPoffertjes - Ihr Dessert-Experte</router-link>
           <!-- <router-link to="/"><h1>McPoffertjes - Ihr Dessert-Experte</h1></router-link> -->
+        <div class="flexrow progress-bar">
+          <div id="Kerndaten">
+            <p>Kerndaten</p>
+          </div>
+          <div id="Tischauswahl">
+            <p>Tischauswahl</p>
+          </div>
+          <div id="Speisenvorauswahl">
+            <p>Speisenvorauswahl</p>
+          </div>
+          <div id="Zusammenfassung">
+            <p>Zusammenfassung</p>
+          </div>
+          <div id="Bestätigung">
+            <p>Bestätigung</p>
+          </div>
+        </div>
         <div class= "box">
         <div class="sidebar-left">
             <h3 class="heading">Zusammenfassung</h3>
@@ -32,12 +49,13 @@
               <input type="email" id="email" v-model="store.email" required="required" :class="(store.email == undefined) && 'required'"> 
             </div>
 
-            <div class="line-item">
+            <div class="info line-item">
               Deine E-Mail-Adresse benötigen wir ausschließlich für die Reservierungsbestätigung.
             </div>
 
             <div class="flexrow buttons">
                 <router-link to="/dish-select">Zurück</router-link>
+                 <a href="/success" :class="!store.email && 'disabled'">Bestätigen</a>
                 <!-- <div><router-link to="/dish-select">Zurück</router-link></div> -->
             </div>
         </div>
@@ -57,9 +75,6 @@
               <strong class="name">Gesamt</strong>
               <strong class="price">{{sumPrice}}€</strong>
               <strong class="count">{{sumCount}}</strong>
-            </div>
-            <div class="flexrow buttons">
-                <a href="/success" :class="!store.email && 'disabled'">Bestätigen</a>
             </div>
             </div>
         </div>
@@ -84,6 +99,17 @@ export default {
 <style scoped lang="less">
 @import "~@/less/default.less";
 
+.progress-bar{
+  #Zusammenfassung{
+    background-color: rgb(255, 145, 0);
+    border: 2px solid rgb(255, 145, 0);
+    p{
+      color: white;
+      font-weight: 600;
+    };
+  }
+}
+
 #email{
   width: 15rem;
   margin: 1rem;
@@ -94,6 +120,10 @@ export default {
 .box{
     display: flex;
     align-items: center´´;
+}
+
+.info{
+  margin: 1rem;
 }
 
 .flexrow{

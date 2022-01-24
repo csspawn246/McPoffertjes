@@ -17,17 +17,7 @@
 <style scoped lang="less">
 //@import "../less/default.less";
 
-/* .flexrow{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
 
-.flexcol{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-} */
 
 .router-link{
     background-color: green;
@@ -35,7 +25,7 @@
 
 .content{
     align-items: center;
-    background-color: lavender;
+    background-color: rgb(253, 230, 200);
     display: flex;
     flex-direction: column;
 
@@ -47,9 +37,9 @@
         a{
             font-size: 20px;
             text-decoration: none;
-            color: rebeccapurple;
-            background-color: lavender;
-            border: 2px solid rebeccapurple;
+            color: rgb(255, 145, 0);
+            background-color: rgb(253, 230, 200);
+            border: 2px solid rgb(255, 145, 0);
             border-radius: 0.5rem;
             padding: 2px 6px;
           }

@@ -3,6 +3,23 @@
     <div class="content">
         <router-link to="/">McPoffertjes - Ihr Dessert-Experte</router-link>
           <!-- <router-link to="/"><h1>McPoffertjes - Ihr Dessert-Experte</h1></router-link> -->
+          <div class="flexrow progress-bar">
+          <div id="Kerndaten">
+            <p>Kerndaten</p>
+          </div>
+          <div id="Tischauswahl">
+            <p>Tischauswahl</p>
+          </div>
+          <div id="Speisenvorauswahl">
+            <p>Speisenvorauswahl</p>
+          </div>
+          <div id="Zusammenfassung">
+            <p>Zusammenfassung</p>
+          </div>
+          <div id="Bestätigung">
+            <p>Bestätigung</p>
+          </div>
+        </div>
         <div class="wrapper">
         <div class="flexcol sidebar-left">
             <h3 class="heading">Tischauswahl</h3>
@@ -29,10 +46,13 @@
                 <div class="seat-count-value">{{selectedSeatCount}}</div>
             </div>
             
-
-            <p>Zum Auswählen eines Tisches klicken.
-              Bereits reservierte Tische sind nicht auswählbar. 
+            <div class="info-text">
+              <p class="info">Zum Auswählen eines Tisches klicken. <br>
+              Bereits reservierte Tische sind nicht auswählbar. <br>
               Die Wahl eines Tisches ist optional.</p>
+            </div>
+            
+            
             <p v-if="error">Bitte wählen Sie die Tische so aus, dass die Anzahl an Sitzplätzen die Anzahl der reservierenden Personen um maximal 2 übersteigt.</p>
 
             <div class="flexrow buttons">
@@ -153,10 +173,26 @@ export default {
 <style scoped lang="less">
 @import "~@/less/default.less";
 
+.progress-bar{
+  #Tischauswahl{
+    background-color: rgb(255, 145, 0);
+    border: 2px solid rgb(255, 145, 0);
+    p{
+      color: white;
+      font-weight: 600;
+    };
+  }
+}
+
 area{
   display: block;
   cursor: pointer;
   border: 1px solid green;
+}
+
+.info-text{
+  width: 100%;
+  align-items: center;
 }
 
 .restaurant-layout{
@@ -183,8 +219,6 @@ area{
     background-color: red;
 
   }
-
-    
 
 
 </style>

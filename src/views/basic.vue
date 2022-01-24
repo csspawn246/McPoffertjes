@@ -3,7 +3,23 @@
     <div class="content">
         <a class="page-heading" href="/">McPoffertjes - Ihr Dessert-Experte</a>
           <!-- <router-link to="/"><h1>McPoffertjes - Ihr Dessert-Experte</h1></router-link> -->
-
+          <div class="flexrow progress-bar">
+          <div id="Kerndaten">
+            <p>Kerndaten</p>
+          </div>
+          <div id="Tischauswahl">
+            <p>Tischauswahl</p>
+          </div>
+          <div id="Speisenvorauswahl">
+            <p>Speisenvorauswahl</p>
+          </div>
+          <div id="Zusammenfassung">
+            <p>Zusammenfassung</p>
+          </div>
+          <div id="Bestätigung">
+            <p>Bestätigung</p>
+          </div>
+        </div>
         <div class="flexcol sidebar-left">
             <h3 class="heading">Reservierung</h3>
 
@@ -43,7 +59,7 @@
               </table>
 
               <div class="opening-hours">
-                <h5>Öffungszeiten</h5>
+                <h5>Öffnungszeiten</h5>
                 <p>Di-So: 12-23 Uhr</p>                 
               </div>
 
@@ -128,6 +144,17 @@ export default {
 
 <style scoped lang="less">
 @import "~@/less/default.less";
+
+.progress-bar{
+  #Kerndaten{
+    background-color: rgb(255, 145, 0);
+    border: 2px solid rgb(255, 145, 0);
+    p{
+      color: white;
+      font-weight: 600;
+    };
+  }
+}
 
 
 

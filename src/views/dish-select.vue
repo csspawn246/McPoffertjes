@@ -3,6 +3,23 @@
     <div class="content">
             <router-link class="page-heading" to="/">McPoffertjes - Ihr Dessert-Experte</router-link>
           <!-- <router-link to="/"><h1>McPoffertjes - Ihr Dessert-Experte</h1></router-link> -->
+        <div class="flexrow progress-bar">
+          <div id="Kerndaten">
+            <p>Kerndaten</p>
+          </div>
+          <div id="Tischauswahl">
+            <p>Tischauswahl</p>
+          </div>
+          <div id="Speisenvorauswahl">
+            <p>Speisenvorauswahl</p>
+          </div>
+          <div id="Zusammenfassung">
+            <p>Zusammenfassung</p>
+          </div>
+          <div id="Bestätigung">
+            <p>Bestätigung</p>
+          </div>
+        </div>
         <div class="wrapper">
         <div class="sidebar-left">
             <h3 class="heading">Speisenauswahl</h3>
@@ -27,7 +44,8 @@
                 <div class="table-nr-value">{{store.tableNr}}</div> 
             </div>
 
-            <p>Die Speisenvorauswahl dient unserem Restaurant dazu, die benötigten Mengen bestimmter Zutaten 
+            <p class="info">
+                Die Speisenvorauswahl dient unserem Restaurant dazu, die benötigten Mengen bestimmter Zutaten 
                 besser einschätzen zu können. Wir versuchen, dies rechtzeitig unseren Lieferanten mitzuteilen,
                 sodass wir weniger Lebensmittel überbestellen und wegwerfen müssen. 
                 Das trägt dazu bei, dass unsere Preise sowie unser CO2-Fußabdruck klein bleiben.
@@ -80,6 +98,16 @@ export default {
 <style scoped lang="less">
 @import "~@/less/default.less";
 
+.progress-bar{
+  #Speisenvorauswahl{
+    background-color: rgb(255, 145, 0);
+    border: 2px solid rgb(255, 145, 0);
+    p{
+      color: white;
+      font-weight: 600;
+    };
+  }
+}
 
 .flexrow{
   display: flex;
@@ -97,6 +125,10 @@ export default {
       width: 30%;
     }
   }
+}
+
+.info{
+  margin: 2rem;
 }
 
 .wrapper {
