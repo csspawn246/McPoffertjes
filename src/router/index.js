@@ -5,7 +5,9 @@ import TableSelect from '../views/table-select.vue'
 import DishSelect from '../views/dish-select.vue'
 import Summary from '../views/summary.vue' 
 import Success from '../views/success.vue'
-
+import login from '../views/login.vue'
+import showReservations from '../views/showReservations.vue'
+import showReservation from '../views/showReservation.vue'
 
 const routes = [
   {
@@ -22,7 +24,6 @@ const routes = [
     path: '/table-select',
     name: 'table-select',
     component: TableSelect,
-
   },
   {
     path: '/dish-select',
@@ -38,6 +39,21 @@ const routes = [
     path: '/success',
     name: 'success',
     component: Success,
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: login
+  },
+  {
+    path: '/showReservations',
+    name: 'showReservations',
+    component: showReservations
+  },
+  {
+    path:'/showReservation',
+    name: 'showReservation',
+    component: showReservation
   }
   // {
   //   path: '/about',

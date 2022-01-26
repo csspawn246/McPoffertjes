@@ -1,7 +1,7 @@
 <template>
   <div class="basic">
     <div class="content">
-        <a class="page-heading" href="/">McPoffertjes - Ihr Dessert-Experte</a>
+        <router-link class="page-heading" to="/" @click="reset=true">McPoffertjes - Ihr Dessert-Experte</router-link>
           <!-- <router-link to="/"><h1>McPoffertjes - Ihr Dessert-Experte</h1></router-link> -->
           <div class="flexrow progress-bar">
           <div id="Kerndaten">
@@ -130,6 +130,7 @@ export default {
   methods: {
   },
   beforeRouteLeave: function(to, from, next) {
+    if(this.reset) next();
     if (!this.store.date || !this.store.time || !this.store.personCount || this.store.personCount < 1) {
       this.error = true;
     } else next();

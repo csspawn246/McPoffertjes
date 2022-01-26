@@ -55,7 +55,7 @@
 
             <div class="flexrow buttons">
                 <router-link to="/dish-select">Zurück</router-link>
-                 <a href="/success" :class="!store.email && 'disabled'">Bestätigen</a>
+                 <router-link to="/success" :class="!store.email && 'disabled'" @click="saveReservation">Bestätigen</router-link>
                 <!-- <div><router-link to="/dish-select">Zurück</router-link></div> -->
             </div>
         </div>
@@ -91,6 +91,21 @@ export default {
   computed: {
     selectedDishes: function() {
       return this.store.dishes.filter(element => {return element.count > 0});
+    }
+  },
+  methods: {
+    saveReservation: function() {
+      this.store.idCount += 1;
+      this.store.reservations.push(
+        {
+          date: this.store.date,
+          time: this.store.time,
+          personCount: this.store.personCount,
+          tableNr: Object.assign({}, this.store.tableNr),
+          dishes: Object.assign({}, this.store.dishes),
+          id: "HZ7/ssdl)2020" + this.store.idCount
+        }
+      )
     }
   }
 }

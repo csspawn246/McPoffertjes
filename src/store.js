@@ -7,8 +7,9 @@ var Store = reactive({
 
     tableNr: [],
 
-    
-    test: 1,
+    currentReservation: 0,
+
+    idCount: 0,
 
     dishes: [
         {
@@ -52,6 +53,8 @@ var Store = reactive({
             count: 0
         },
     ],
+
+    reservations: [],
 
     tables: [
         {id: 1, seatCount: 2},

@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div class="content">
-            <a class="page-heading" href="/">McPoffertjes - Ihr Dessert-Experte</a>
+        <router-link class="page-heading" to="/" @click="reset=true">McPoffertjes - Ihr Dessert-Experte</router-link>
             <div class="flexrow progress-bar">
                 <div id="Kerndaten">
                     <p>Kerndaten</p>
@@ -22,7 +22,7 @@
             <p></p>
             <h>Herzlichen Dank für Deine Reservierung! <br> Deine Bestellung war erfolgreich!</h>
             <p>Zeige bitte folgenden Code im Restaurant vor:</p>
-            <p>HZ7/ssdl)2020</p>
+            <p>{{"HZ7/ssdl)2020" + store.idCount}}</p>
             <p>In Kürze erhältst du von uns eine Zusammenfassung deiner Reservierung an die von dir angegebene E-Mail.</p>
             <p>Eine Änderung oder Stornierung deiner Reservierung ist von jetzt an leider nur noch telefonisch möglich.</p>
             <p>Bitte melde dich bei Fragen unter:</p>
@@ -32,6 +32,14 @@
         </div>
     </div>
 </template>
+
+<script>
+import mixin from '@/mixin.js'
+
+export default {
+  mixins: [mixin],
+  }
+</script>
 
 <style scoped lang="less">
 @import "~@/less/default.less";
