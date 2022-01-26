@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <div class="content">
-        <router-link class="page-heading" to="/" @click="reset=true">McPoffertjes - Ihr Dessert-Experte</router-link>
+        <a class="page-heading" href="/" @click="reset=true">McPoffertjes - Ihr Dessert-Experte</a>
             <div class="flexrow progress-bar">
                 <div id="Kerndaten">
                     <p>Kerndaten</p>
