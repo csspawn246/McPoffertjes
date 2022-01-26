@@ -1,7 +1,7 @@
 <template>
   <div class="summary">
     <div class="content">
-        <router-link class="page-heading" to="/">McPoffertjes - Ihr Dessert-Experte</router-link>
+        <a class="page-heading" href="/">McPoffertjes - Ihr Dessert-Experte</a>
           <!-- <router-link to="/"><h1>McPoffertjes - Ihr Dessert-Experte</h1></router-link> -->
         <div class="flexrow progress-bar">
           <div id="Kerndaten">
@@ -96,6 +96,7 @@ export default {
   methods: {
     saveReservation: function() {
       this.store.idCount += 1;
+      /*
       this.store.reservations.push(
         {
           date: this.store.date,
@@ -106,6 +107,7 @@ export default {
           id: "HZ7/ssdl)2020" + this.store.idCount
         }
       )
+      */
     }
   }
 }

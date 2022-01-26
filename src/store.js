@@ -54,7 +54,104 @@ var Store = reactive({
         },
     ],
 
-    reservations: [],
+    reservations: [
+        {
+            date: '2022-01-31',
+            time: '14:00',
+            personCount : 6,
+            dishes: [
+                {
+                    name: "Lachsfilet (süß)",
+                    price: 26,
+                    count: 3
+                },
+                {
+                    name: "Süß-Kartoffelgratin",
+                    price: 4.2,
+                    count: 0
+                },
+                {
+                    name: "Marmeladendöner",
+                    price: 10,
+                    count: 3
+                },
+                {
+                    name: "Tiramisu",
+                    price: 8,
+                    count: 0
+                },
+                {
+                    name: "Poffertjes für Leute ohne Familie :(",
+                    price: 2.6,
+                    count: 0
+                },
+                {
+                    name: "Poffertjes Familienplatte",
+                    price: 16.9,
+                    count: 0
+                },
+                {
+                    name: "Poffertjes für Verliebte (2 Pers.)",
+                    price: 10.2,
+                    count: 0
+                },
+                {
+                    name: "Süßkartoffel für Verliebte (2 Pers.)",
+                    price: 9.3,
+                    count: 0
+                },
+            ],
+            id: "HZ7/ssdl)20200"
+        },
+        {
+            date: '2022-02-01',
+            time: '10:00',
+            personCount : 2,
+            dishes: [
+                {
+                    name: "Lachsfilet (süß)",
+                    price: 26,
+                    count: 0
+                },
+                {
+                    name: "Süß-Kartoffelgratin",
+                    price: 4.2,
+                    count: 0
+                },
+                {
+                    name: "Marmeladendöner",
+                    price: 10,
+                    count: 0
+                },
+                {
+                    name: "Tiramisu",
+                    price: 8,
+                    count: 1
+                },
+                {
+                    name: "Poffertjes für Leute ohne Familie :(",
+                    price: 2.6,
+                    count: 0
+                },
+                {
+                    name: "Poffertjes Familienplatte",
+                    price: 16.9,
+                    count: 0
+                },
+                {
+                    name: "Poffertjes für Verliebte (2 Pers.)",
+                    price: 10.2,
+                    count: 1
+                },
+                {
+                    name: "Süßkartoffel für Verliebte (2 Pers.)",
+                    price: 9.3,
+                    count: 0
+                },
+            ],
+            id: "HZ7/ssdl)20201"
+        }
+    ],
 
     tables: [
         {id: 1, seatCount: 2},
